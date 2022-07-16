@@ -42,14 +42,12 @@ function LStorageProvider(props) {
     return budget, expenses;
   });
 
-  console.log(state);
 
 
     useEffect(() => {
         localStorage.setItem('expenses', JSON.stringify(state));
     }, [state])
 
-    console.log(state.budget);
 
   return (
     <lStorageContext.Provider value={{ dispatch, budget: state.budget, expenses: state.expenses }}>

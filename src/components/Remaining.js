@@ -14,8 +14,6 @@ function Remaining() {
     //   return curr;
     // }, 0)
 
-    console.log("exp: ", expenses);
-    console.log('bud: ', budget);
     let total = 0;
     for (let i of expenses) {
       total += i.cost;

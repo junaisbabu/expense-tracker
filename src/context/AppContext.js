@@ -25,18 +25,15 @@ const AppReducer = (state, action) => {
   if (action.type === "ADD_EXPENSE") {
     return { ...state, expenses: [...state.expenses, action.payLoad] };
     // state.expenses.push(action.payLoad);
-    // console.log(state);
     // return state;
   } else if (action.type === "DELETE_EXPENSE") {
     const restExpenses = state.expenses.filter(
       (expense) => {
-        console.log(expense);
         return action.payLoad !== expense.id
         // return true
       }
     );
 
-    console.log('rest ', restExpenses);
 
     return { ...state, expenses: restExpenses };
   } else {
